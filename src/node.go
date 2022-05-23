@@ -2,14 +2,14 @@ package src
 
 import "fmt"
 
-type Node struct {
-	Value int
-	Next  *Node
+type ListNode struct {
+	Val  int
+	Next *ListNode
 }
 
-func (n *Node) String() string {
+func (n *ListNode) String() string {
 	if n == nil {
 		return "nil"
 	}
-	return fmt.Sprintf("{Value:%d Next:%+v}", n.Value, *n.Next)
+	return fmt.Sprintf("{Val:%d Next:%+v}", n.Val, *n.Next)
 }

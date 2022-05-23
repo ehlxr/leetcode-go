@@ -1,7 +1,7 @@
 package src
 
-func Reverse(root *Node) *Node {
-	var pre, tmp *Node
+func Reverse(root *ListNode) *ListNode {
+	var pre, tmp *ListNode
 	cur := root
 	for cur != nil {
 		tmp = cur.Next
@@ -13,7 +13,20 @@ func Reverse(root *Node) *Node {
 	return pre
 }
 
-func ReverseKGroup(root *Node, k int) *Node {
+func ReverseRec(root *ListNode) *ListNode {
+	if root == nil || root.Next == nil {
+		return root
+	}
+
+	res := ReverseRec(root.Next)
+	root.Next.Next = root
+	root.Next = nil
+
+	return res
+}
+
+/* K 个一组翻转链表 */
+func ReverseKGroup(root *ListNode, k int) *ListNode {
 	if root == nil {
 		return root
 	}
@@ -29,8 +42,9 @@ func ReverseKGroup(root *Node, k int) *Node {
 	return tmp
 }
 
-func ReverseN(root *Node, n *Node) *Node {
-	var pre, tmp *Node
+/* 反转链表到指定节点 */
+func ReverseN(root *ListNode, n *ListNode) *ListNode {
+	var pre, tmp *ListNode
 	cur := root
 	for cur != n {
 		tmp = cur.Next
