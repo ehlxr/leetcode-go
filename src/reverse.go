@@ -13,6 +13,7 @@ func Reverse(root *ListNode) *ListNode {
 	return pre
 }
 
+/* 递归反转链表 */
 func ReverseRec(root *ListNode) *ListNode {
 	if root == nil || root.Next == nil {
 		return root
