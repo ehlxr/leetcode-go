@@ -29,5 +29,6 @@ func palindrome(s string, l, r int) string {
 
 	// (r-1)-l 为回文串的长度
 	// s[l+1 : (r-1)-l+(l+1)] 为回文串
+	// 区间：[:)
 	return s[l+1 : r]
 }
