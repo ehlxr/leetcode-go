@@ -1,10 +1,6 @@
 package main
 
-import (
-	"fmt"
-
-	. "github.com/ehlxr/leetcode-go/src"
-)
+import "fmt"
 
 func main() {
 	// node5 := &ListNode{Val: 5, Next: nil}
@@ -19,17 +15,11 @@ func main() {
 	// fmt.Printf("%v\n", ReverseRec(root))
 	// fmt.Printf("%v\n", ReverseKGroup(root, 2))
 
-	// s := "Hello 你好"
-	// println(s[2], s[6])
-	// rs := []rune(s)
-	// println(string(rs[6]))
+	s := "Hello 你好"
+	fmt.Println(s[2], s[6])
+	rs := []rune(s)
+	println(string(rs[6]))
 
 	// s := "babad"
 	// println(LongestPalindrome(s))
-
-	s := "bacbababaabcbab"
-	p := "ababa"
-	// fmt.Printf("%+v\n", GetNext(p))
-	fmt.Printf("%+v\n", Kmp(s, p))
-	fmt.Printf("%+v", Bf(s, p))
 }

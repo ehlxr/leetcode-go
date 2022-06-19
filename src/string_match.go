@@ -1,7 +1,7 @@
 package src
 
 // 暴力匹配
-func Bf(s, p string) int {
+func bf(s, p string) int {
 	n := len(s)
 	m := len(p)
 	if n < m {
@@ -25,13 +25,13 @@ func Bf(s, p string) int {
 	return -1
 }
 
-func Kmp(s, p string) int {
+func kmp(s, p string) int {
 	n := len(s)
 	m := len(p)
 	if n < m {
 		return -1
 	}
-	next := GetNext(p)
+	next := getNext(p)
 
 	for i := 0; i <= n-m; i++ {
 		j := 0
@@ -60,7 +60,7 @@ func Kmp(s, p string) int {
 	return -1
 }
 
-func GetNext(p string) []int {
+func getNext(p string) []int {
 	n := len(p)
 	next := make([]int, n)
 	next[0] = 0
