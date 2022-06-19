@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+
 	. "github.com/ehlxr/leetcode-go/src"
 )
 
@@ -22,7 +24,12 @@ func main() {
 	// rs := []rune(s)
 	// println(string(rs[6]))
 
-	s := "babad"
-	println(LongestPalindrome(s))
+	// s := "babad"
+	// println(LongestPalindrome(s))
 
+	s := "bacbababaabcbab"
+	p := "ababa"
+	// fmt.Printf("%+v\n", GetNext(p))
+	fmt.Printf("%+v\n", Kmp(s, p))
+	fmt.Printf("%+v", Bf(s, p))
 }
