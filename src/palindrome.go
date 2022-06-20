@@ -1,7 +1,7 @@
 package src
 
 /* 给你一个字符串 s，找到 s 中最长的回文子串 */
-func LongestPalindrome(s string) string {
+func longestPalindrome(s string) string {
 	var res string
 	for i := 0; i < len(s); i++ {
 		// 回文串长度为奇数

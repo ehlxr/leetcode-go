@@ -1,6 +1,6 @@
 package src
 
-func Reverse(root *ListNode) *ListNode {
+func reverse(root *ListNode) *ListNode {
 	var pre, tmp *ListNode
 	cur := root
 	for cur != nil {
@@ -14,12 +14,12 @@ func Reverse(root *ListNode) *ListNode {
 }
 
 /* 递归反转链表 */
-func ReverseRec(root *ListNode) *ListNode {
+func reverseRec(root *ListNode) *ListNode {
 	if root == nil || root.Next == nil {
 		return root
 	}
 
-	res := ReverseRec(root.Next)
+	res := reverseRec(root.Next)
 	root.Next.Next = root
 	root.Next = nil
 
@@ -27,7 +27,7 @@ func ReverseRec(root *ListNode) *ListNode {
 }
 
 /* K 个一组翻转链表 */
-func ReverseKGroup(root *ListNode, k int) *ListNode {
+func reverseKGroup(root *ListNode, k int) *ListNode {
 	if root == nil {
 		return root
 	}
@@ -38,13 +38,13 @@ func ReverseKGroup(root *ListNode, k int) *ListNode {
 		}
 		n = n.Next
 	}
-	tmp := ReverseN(root, n)
-	root.Next = ReverseKGroup(n, k)
+	tmp := reverseN(root, n)
+	root.Next = reverseKGroup(n, k)
 	return tmp
 }
 
 /* 反转链表到指定节点 */
-func ReverseN(root *ListNode, n *ListNode) *ListNode {
+func reverseN(root *ListNode, n *ListNode) *ListNode {
 	var pre, tmp *ListNode
 	cur := root
 	for cur != n {

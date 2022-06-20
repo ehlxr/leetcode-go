@@ -7,5 +7,5 @@ import (
 
 func TestLongestPalindrome(t *testing.T) {
 	s := "babad"
-	fmt.Printf("LongestPalindrome of %s is %s\n", s, LongestPalindrome(s))
+	fmt.Printf("LongestPalindrome of %s is %s\n", s, longestPalindrome(s))
 }
