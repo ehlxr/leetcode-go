@@ -11,6 +11,7 @@ func find(root *TreeNode, l, r int) *TreeNode {
 	if root == nil {
 		return nil
 	}
+	// p 和 q 均存在于给定的二叉树中
 	if root.Val == l || root.Val == r {
 		return root
 	}
